@@ -1,8 +1,10 @@
-import pyping
+#/usr/bin/python3.6
+import subprocess
+stdoutdata = subprocess.getoutput("ping -c 1 google.com")
+print("stdoutdata: " + stdoutdata.split()[0])
 
-r = pyping.ping('google.com')
 
-print(r)
+
 
 # def show(cpu):
 #     color = '#cc575d' if cpu > 75 else '#d19a66' if cpu > 50 else '#fafafa'
